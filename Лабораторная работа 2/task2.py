@@ -7,4 +7,6 @@ money_capital = spend - salary
 for i in range(1, months):
     spend *= (1 + increase)
     money_capital += spend - salary
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", round(money_capital))
+    if (money_capital % 10 != 0):
+        money_capital = int(money_capital) + 1
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", (money_capital))
