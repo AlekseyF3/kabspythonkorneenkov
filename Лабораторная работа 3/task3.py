@@ -1,23 +1,19 @@
-# TODO  Напишите функцию count_letters
-
 def count_letters(txt):
-    l_count = {}
+    letter_count = {}
     txt = txt.lower()
     for char in txt:
         if char.isalpha():
             char_lower = char.lower()
             if char in l_count:
-                l_count[char_lower] += 1
+                letter_count[char_lower] += 1
             else:
-                l_count[char_lower] = 1
-    return {key: value for key, value in l_count.items() if key.islower()}
+                letter_count[char_lower] = 1
+    return {key: value for key, value in letter_count.items() if key.islower()}
 
 
-# TODO Напишите функцию calculate_frequency
-
-def calculate_frequency(l_count):
-    letters = sum(l_count.values()) # общее количество букв
-    frequency = {key: round(value / letters, 2) for key, value in l_count.items()}
+def calculate_frequency(letter_count):
+    letters = sum(letter_count.values()) # общее количество букв
+    frequency = {key: round(value / letters, 2) for key, value in letter_count.items()}
     return frequency
 
 
@@ -57,10 +53,9 @@ main_str = """
 Свои мне сказки говорил.
 """
 
-# TODO Распечатайте в столбик букву и её частоту в тексте
 
-l_count = count_letters(main_str)
-frequency = calculate_frequency(l_count)
+letter_count = count_letters(main_str)
+frequency = calculate_frequency(letter_count)
 
 for key, value in frequency.items():
     print(f"{key}: {value:.2f}")
