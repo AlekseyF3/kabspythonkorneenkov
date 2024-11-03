@@ -1,5 +1,3 @@
-# TODO Напишите функцию для поиска индекса товара
-
 def find_index(items_list,find_item):
     if find_item in items_list:
         return items_list.index(find_item)
