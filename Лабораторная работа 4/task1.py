@@ -1,4 +1,3 @@
-# TODO решите задачу
 import json
 def task(file):
     with open('input.json', 'r') as file:
