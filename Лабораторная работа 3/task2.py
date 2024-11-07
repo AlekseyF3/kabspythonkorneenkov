@@ -1,9 +1,6 @@
-def find_common_participants(first, second, znak=","):
-    first_set = set(first.split(znak))
-    second_set = set(second.split(znak))
-
-    first = "Иванов|Петров|Сидоров"
-    second = "Петров|Сидоров|Смирнов"
+def find_common_participants(first, second, sign=","):
+    first_set = set(first.split(sign))
+    second_set = set(second.split(sign))
 
     common_participants = first_set.intersection(second_set)
     return sorted(list(common_participants))
@@ -12,5 +9,5 @@ def find_common_participants(first, second, znak=","):
 first = "Иванов|Петров|Сидоров"
 second = "Петров|Сидоров|Смирнов"
 
-common_participants = find_common_participants(first, second, znak="|")
+common_participants = find_common_participants(first, second, sign="|")
 print(common_participants)
