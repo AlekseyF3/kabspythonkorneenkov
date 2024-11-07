@@ -4,7 +4,7 @@ def count_letters(txt):
     for char in txt:
         if char.isalpha():
             char_lower = char.lower()
-            if char in l_count:
+            if char in letter_count:
                 letter_count[char_lower] += 1
             else:
                 letter_count[char_lower] = 1
@@ -12,7 +12,7 @@ def count_letters(txt):
 
 
 def calculate_frequency(letter_count):
-    letters = sum(letter_count.values()) # общее количество букв
+    letters = sum(letter_count.values())  # общее количество букв
     frequency = {key: round(value / letters, 2) for key, value in letter_count.items()}
     return frequency
 
@@ -53,9 +53,9 @@ main_str = """
 Свои мне сказки говорил.
 """
 
-
 letter_count = count_letters(main_str)
 frequency = calculate_frequency(letter_count)
 
 for key, value in frequency.items():
-    print(f"{key}: {value:.2f}")
+    print(f"{key}: {value: .2f}")
+
