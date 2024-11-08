@@ -13,7 +13,7 @@ def count_letters(txt):
 
 def calculate_frequency(letter_count):
     letters = sum(letter_count.values())  # общее количество букв
-    frequency = {key: round(value / letters, 2) for key, value in letter_count.items()}
+    frequency = {key: value / letters for key, value in letter_count.items()}
     return frequency
 
 
