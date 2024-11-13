@@ -1,7 +1,9 @@
 import json
+
+
 def task(file):
     with open('input.json', 'r') as file:
-        data = json.load(file) # читаем данные из файла
+        data = json.load(file)  # читаем данные из файла
 
     sum = 0.0
 
@@ -11,6 +13,7 @@ def task(file):
         sum += score * weight  # Вычисляем произведение и добавляем к общей сумме
 
     return round(sum, 3)
+
 
 json_path = 'input.json'
 result = task(input)
